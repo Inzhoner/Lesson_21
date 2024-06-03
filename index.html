@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 21</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        .task {
+            margin-bottom: 20px;
+        }
+
+        .task h2 {
+            color: #333;
+        }
+
+        .task pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .task .answer {
+            background-color: #e7f5ff;
+            padding: 10px;
+            border: 1px solid #b3d4fc;
+        }
+
+        #answers {
+            display: none;
+        }
+
+        #triggerDiv {
+            width: 1000px;
+            text-align: center;
+            font-size: 40px;
+            background-color: lightblue;
+            margin-inline: auto;
+            padding: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="triggerDiv">
+        Lesson 21 (тиць тут)
+    </div>
+
+    <div id="answers">
+        <div class="task">
+            <h2>Задача №1</h2>
+            <p>Яка назва змінної вірна?</p>
+            <pre><code>1) let user-name
+2) let UserName
+3) let userName</code></pre>
+            <div class="answer">
+                <strong>Відповідь:</strong> Правильний варіант 3. Іменування змінних в JavaScript зазвичай використовує camelCase (початкова маленька буква, далі кожне нове слово з великої букви).
+            </div>
+        </div>
+
+        <div class="task">
+            <h2>Задача №2</h2>
+            <p>Чи буде помилка при виконанні наступної програми?</p>
+            <pre><code>const userName = 20
+userName = "Іштван"</code></pre>
+            <div class="answer">
+                <strong>Відповідь:</strong> Так, буде помилка. Оскільки <code>userName</code> оголошено за допомогою <code>const</code>, значення цієї змінної не можна змінювати після початкового присвоєння. Спроба присвоїти нове значення призведе до помилки <code>TypeError</code>.
+            </div>
+        </div>
+
+        <div class="task">
+            <h2>Задача №3</h2>
+            <p>Що потрапить в консоль?</p>
+            <pre><code>let numOne = 20
+let numTwo = "20"
+
+let numSumm = numOne + numTwo
+console.log(numSumm)</code></pre>
+            <div class="answer">
+                <strong>Відповідь:</strong> В консоль потрапить "2020". Операція <code>+</code> між числом і рядком призводить до конкатенації, а не арифметичного додавання. Тому число <code>20</code> буде перетворено в рядок і додано до рядка <code>"20"</code>, що в результаті дає <code>"2020"</code>.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
